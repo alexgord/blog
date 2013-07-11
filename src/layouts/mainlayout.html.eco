@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <title><%= @document.title %></title>
+	    <%- @getBlock("meta").toHTML() %>
+	    <%- @getBlock("styles").add(["/styles/style.css", "/bootstrap/bootstrap.css"]).toHTML() %>
+	</head>
+	<body>
+		<div class="bigcontent">
+			<div class="maincontent">
+				<%- @content %>
+			</div>
+			<div>
+				Older blog posts
+				<div class="scrollList">
+				    <% for post in @getCollection("html").findAllLive({relativeOutDirPath: 'posts'},[{date:-1}]).toJSON(): %>
+					    <a href="<%= post.url %>"><%= post.title %></a>, posted on <%= @formatDate(post.date) %> <br/>
+					<% end %>
+				</div>
+			<div>
+		</div>
+	    <script src="/jquery-ui-1.10.3/jquery-1.9.1.js"></script>
+		<script src="/jquery-ui-1.10.3/ui/jquery.ui.core.js"></script>
+		<script src="/jquery-ui-1.10.3/ui/jquery-ui.js"></script>
+		<script src="/bootstrap/bootstrap.js"></script>
+	</body>
+</html>
