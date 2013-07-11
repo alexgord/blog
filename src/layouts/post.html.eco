@@ -1,7 +1,7 @@
 ---
 layout: mainlayout
 ---
-<a href="/">
+<a href="../">
 	<h1>Alex's blog</h1>
 </a>
 <h2><%= @document.title %></h2>

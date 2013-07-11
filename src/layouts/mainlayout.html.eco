@@ -3,7 +3,7 @@
 	<head>
 	    <title><%= @document.title %></title>
 	    <%- @getBlock("meta").toHTML() %>
-	    <%- @getBlock("styles").add(["/styles/blogstyle.css", "/bootstrap/css/bootstrap.css"]).toHTML() %>
+	    <%- @getBlock("styles").add(["/css/blogstyle.css", "/bootstrap/css/bootstrap.css"]).toHTML() %>
 	</head>
 	<body>
 		<div class="bigcontent">
@@ -19,9 +19,9 @@
 				</div>
 			<div>
 		</div>
-	    <script src="/jquery-ui-1.10.3/jquery-1.9.1.js"></script>
-		<script src="/jquery-ui-1.10.3/ui/jquery.ui.core.js"></script>
-		<script src="/jquery-ui-1.10.3/ui/jquery-ui.js"></script>
-		<script src="/bootstrap/js/bootstrap.js"></script>
+	    <script src="jquery-ui-1.10.3/jquery-1.9.1.js"></script>
+		<script src="jquery-ui-1.10.3/ui/jquery.ui.core.js"></script>
+		<script src="jquery-ui-1.10.3/ui/jquery-ui.js"></script>
+		<script src="bootstrap/js/bootstrap.js"></script>
 	</body>
 </html>
