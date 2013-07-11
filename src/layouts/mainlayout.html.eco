@@ -3,7 +3,7 @@
 	<head>
 	    <title><%= @document.title %></title>
 	    <%- @getBlock("meta").toHTML() %>
-	    <%- @getBlock("styles").add(["/styles/style.css", "/bootstrap/css/bootstrap.css"]).toHTML() %>
+	    <%- @getBlock("styles").add(["/styles/blogstyle.css", "/bootstrap/css/bootstrap.css"]).toHTML() %>
 	</head>
 	<body>
 		<div class="bigcontent">
